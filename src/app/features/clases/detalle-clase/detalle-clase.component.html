@@ -1,0 +1,25 @@
+@let claseData = clase();
+
+@if(clasesResource.isLoading()){
+    <div>Cargando detalles...</div>
+}
+
+@if(clasesResource.error()){
+    <div>Error al cargar la clase</div>
+}
+
+@if(!clasesResource.isLoading() && claseData){
+    <h2>{{ claseData?.nombre }}</h2>
+    <p><strong>Tipo:</strong> {{ claseData?.tipo }}</p>
+    <p><strong>Ubicación:</strong> {{ claseData?.ubicacion }}</p>
+    <p><strong>Horario:</strong> {{ claseData?.horario | date: 'short' }}</p>
+    <!-- <p><strong>Descripción:</strong> {{ clase()?.descripcion }}</p> -->
+
+    <button (click)="reservar()">Reservar</button>
+    <button (click)="volver()">Volver</button>
+}
+
+@if(!clasesResource.isLoading() && !claseData){
+    <p>Clase no encontrada.</p>
+    <button (click)="volver()">Volver</button>
+}

@@ -32,9 +32,11 @@
     <ul>
         @for (clase of clasesFiltradas(); track $index){
             <li>
-                <strong>{{ clase.nombre }}</strong> - {{ clase.tipo }}
-                <br>
-                <small>{{ clase.ubicacion }} | {{ clase.horario | date: 'short' }}</small>
+                <a [routerLink]="['/clases', clase.id]">
+                    <strong>{{ clase.nombre }}</strong> - {{ clase.tipo }}
+                    <br>
+                    <small>{{ clase.ubicacion }} | {{ clase.horario | date: 'short' }}</small>
+                </a>
             </li>
 
         }
