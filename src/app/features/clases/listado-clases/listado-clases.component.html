@@ -1,0 +1,42 @@
+@if(clasesResource.isLoading()){
+    <p>Cargando clases...</p>
+}
+@if(clasesResource.error()){
+    <p>Error al cargar datos</p>
+}
+
+@if(!clasesResource.isLoading() && !clasesResource.error()){
+    <div class="filters">
+        <select [ngModel]="filtroUbicacion()" (ngModelChange)="filtroUbicacion.set($event)">
+            <option value="">Todas las ubicaciones</option>
+            @for(ubicacion of ubicaciones(); track $index){
+                <option [ngValue]="ubicacion">{{ ubicacion }}</option>
+            }
+        </select>
+
+        <select [ngModel]="filtroTipo()" (ngModelChange)="filtroTipo.set($event)">
+            <option value="">Todos los tipos</option>
+            @for(tipo of tipos(); track $index){
+                <option [ngValue]="tipo">{{ tipo }}</option>
+            }
+        </select>
+
+        <input 
+            type="date"
+            [(ngModel)]="filtroFecha"
+            (ngModelChange)="filtroFecha.set($event)"
+        />
+
+        <button (click)="limpiarFiltros()">Limpiar filtros</button>
+    </div>
+    <ul>
+        @for (clase of clasesFiltradas(); track $index){
+            <li>
+                <strong>{{ clase.nombre }}</strong> - {{ clase.tipo }}
+                <br>
+                <small>{{ clase.ubicacion }} | {{ clase.horario | date: 'short' }}</small>
+            </li>
+
+        }
+    </ul>
+}
