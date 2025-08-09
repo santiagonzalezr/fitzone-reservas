@@ -1,0 +1,21 @@
+@let reservasData = reservas();
+
+<h2>Mis reservas</h2>
+
+@if(!hayReservas()){
+    <p>No tienes reservas</p>
+}
+
+@if(hayReservas()){
+    <ul>
+        @for(reserva of reservasData; track $index){
+            <li>
+                <strong>{{ reserva.nombre }}</strong> - {{ reserva.tipo }}
+                <br>
+                <small>{{ reserva.ubicacion }} | {{ reserva.horario | date: 'short' }}</small>
+                <br>
+                <button (click)="cancelarReserva(reserva.id)">Cancelar</button>
+            </li>
+        }
+    </ul>
+}
