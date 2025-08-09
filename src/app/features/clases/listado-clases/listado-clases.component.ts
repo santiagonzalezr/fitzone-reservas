@@ -4,10 +4,12 @@ import { Clase } from '../../../core/models/clase.model';
 import { DatePipe } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { rxResource } from '@angular/core/rxjs-interop';
+import { RouterLinkWithHref } from '@angular/router';
 
 @Component({
   selector: 'app-listado-clases',
-  imports: [DatePipe, FormsModule],
+  standalone: true,
+  imports: [DatePipe, FormsModule, RouterLinkWithHref],
   templateUrl: './listado-clases.component.html',
   styleUrl: './listado-clases.component.css'
 })
