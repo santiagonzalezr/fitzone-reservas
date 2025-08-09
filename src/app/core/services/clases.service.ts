@@ -21,4 +21,22 @@ export class ClasesService {
       map(data => data.clases)
     );
   }
+
+  getUbicaciones(){
+    return this.getClases().pipe(
+      map(clases => [...new Set(clases.map(c => c.ubicacion))])
+    );
+  }
+
+  getTipos(){
+    return this.getClases().pipe(
+      map(clases => [...new Set(clases.map(c => c.tipo))])
+    );
+  }
+
+  getHorarios(){
+    return this.getClases().pipe(
+      map(clases => [...new Set(clases.map(h => h.horario))])
+    )
+  }
 }

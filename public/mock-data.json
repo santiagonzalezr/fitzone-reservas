@@ -23,6 +23,22 @@
       "ubicacion": "Sede Sur",
       "horario": "2025-08-10T07:00:00",
       "cupos": 12
+    },
+    {
+      "id": 4,
+      "nombre": "Crossfit Avanzado",
+      "tipo": "Crossfit",
+      "ubicacion": "Sede Sur",
+      "horario": "2025-11-10T10:00:00",
+      "cupos": 8
+    },
+    {
+      "id": 5,
+      "nombre": "Yoga Intermedio",
+      "tipo": "Yoga",
+      "ubicacion": "Sede Centro",
+      "horario": "2025-11-10T10:00:00",
+      "cupos": 8
     }
   ],
   "usuarios": [
