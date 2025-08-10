@@ -2,52 +2,103 @@
   "clases": [
     {
       "id": 1,
-      "nombre": "Yoga para principiantes",
-      "tipo": "Yoga",
+      "nombre": "Yoga",
+      "tipo": "Bienestar",
       "ubicacion": "Sede Norte",
-      "horario": "2025-08-09T08:00:00",
-      "cupos": 15
+      "horario": "2025-08-10T09:00:00",
+      "duracion": "60 min",
+      "instructor": "María López",
+      "descripcion": "Clase de yoga enfocada en la relajación y estiramiento."
     },
     {
       "id": 2,
-      "nombre": "Spinning Avanzado",
-      "tipo": "Spinning",
+      "nombre": "CrossFit",
+      "tipo": "Entrenamiento Funcional",
       "ubicacion": "Sede Centro",
-      "horario": "2025-08-09T09:30:00",
-      "cupos": 10
+      "horario": "2025-08-10T18:00:00",
+      "duracion": "45 min",
+      "instructor": "Carlos Gómez",
+      "descripcion": "Entrenamiento de alta intensidad combinando fuerza y cardio."
     },
     {
       "id": 3,
-      "nombre": "Crossfit Intermedio",
-      "tipo": "Crossfit",
-      "ubicacion": "Sede Sur",
-      "horario": "2025-08-10T07:00:00",
-      "cupos": 12
+      "nombre": "Zumba",
+      "tipo": "Cardio",
+      "ubicacion": "Sede Norte",
+      "horario": "2025-08-11T19:00:00",
+      "duracion": "50 min",
+      "instructor": "Laura Rodríguez",
+      "descripcion": "Clase de baile con ritmos latinos para quemar calorías divirtiéndote."
     },
     {
       "id": 4,
-      "nombre": "Crossfit Avanzado",
-      "tipo": "Crossfit",
+      "nombre": "Spinning",
+      "tipo": "Cardio",
       "ubicacion": "Sede Sur",
-      "horario": "2025-11-10T10:00:00",
-      "cupos": 8
+      "horario": "2025-08-12T07:00:00",
+      "duracion": "40 min",
+      "instructor": "Andrés Martínez",
+      "descripcion": "Entrenamiento de ciclismo indoor para mejorar resistencia y fuerza."
     },
     {
       "id": 5,
-      "nombre": "Yoga Intermedio",
-      "tipo": "Yoga",
+      "nombre": "Pilates",
+      "tipo": "Bienestar",
       "ubicacion": "Sede Centro",
-      "horario": "2025-11-10T10:00:00",
-      "cupos": 8
-    }
-  ],
-  "usuarios": [
+      "horario": "2025-08-12T17:00:00",
+      "duracion": "55 min",
+      "instructor": "Lucía Ramírez",
+      "descripcion": "Ejercicios para fortalecer el core y mejorar la postura."
+    },
     {
-      "id": 1,
-      "nombre": "Usuario Prueba",
-      "email": "test@fitzone.com",
-      "password": "123456"
+      "id": 6,
+      "nombre": "Entrenamiento Funcional",
+      "tipo": "Fuerza",
+      "ubicacion": "Sede Sur",
+      "horario": "2025-08-13T08:00:00",
+      "duracion": "50 min",
+      "instructor": "Diego Torres",
+      "descripcion": "Circuitos con peso corporal y accesorios para fortalecer todo el cuerpo."
+    },
+    {
+      "id": 7,
+      "nombre": "Boxeo",
+      "tipo": "Fuerza",
+      "ubicacion": "Sede Norte",
+      "horario": "2025-08-13T19:00:00",
+      "duracion": "60 min",
+      "instructor": "Fernando Sánchez",
+      "descripcion": "Entrenamiento de boxeo para mejorar técnica, resistencia y potencia."
+    },
+    {
+      "id": 8,
+      "nombre": "Stretching",
+      "tipo": "Bienestar",
+      "ubicacion": "Sede Centro",
+      "horario": "2025-08-14T09:00:00",
+      "duracion": "45 min",
+      "instructor": "Patricia Herrera",
+      "descripcion": "Sesión enfocada en estiramientos para mejorar flexibilidad y prevenir lesiones."
+    },
+    {
+      "id": 9,
+      "nombre": "HIIT",
+      "tipo": "Cardio",
+      "ubicacion": "Sede Sur",
+      "horario": "2025-08-14T18:00:00",
+      "duracion": "30 min",
+      "instructor": "Sofía Delgado",
+      "descripcion": "Entrenamiento interválico de alta intensidad para quemar grasa y mejorar resistencia."
+    },
+    {
+      "id": 10,
+      "nombre": "Baile Urbano",
+      "tipo": "Cardio",
+      "ubicacion": "Sede Norte",
+      "horario": "2025-08-15T20:00:00",
+      "duracion": "60 min",
+      "instructor": "Javier Morales",
+      "descripcion": "Clase divertida de baile urbano para mejorar coordinación y condición física."
     }
-  ],
-  "reservas": []
+  ]
 }

@@ -21,7 +21,8 @@
         <h2>{{ claseData?.nombre }}</h2>
         <p class="mb-2"><strong>Tipo:</strong> {{ claseData?.tipo }}</p>
         <p class="mb-2"><strong>Ubicación:</strong> {{ claseData?.ubicacion }}</p>
-        <p class="mb-4"><strong>Horario:</strong> {{ claseData?.horario | date: 'short' }}</p>
+        <p class="mb-2"><strong>Horario:</strong> {{ claseData?.horario | date: 'short' }}</p>
+        <p class="mb-4"><strong>Descripción:</strong> {{ claseData?.descripcion }}</p>
     </div>
 
     <div class="flex gap-4 mt-8">

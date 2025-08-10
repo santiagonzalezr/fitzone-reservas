@@ -10,7 +10,7 @@ import { AuthService } from '../../../core/services/auth.service';
   styleUrl: './nav.component.css'
 })
 export class NavComponent {
-  private authService = inject(AuthService);
+  authService = inject(AuthService);
   toggleBtn = false;
 
   toggleNav(){

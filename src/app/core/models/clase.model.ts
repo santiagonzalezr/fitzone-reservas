@@ -4,5 +4,5 @@ export interface Clase {
   tipo: string;
   ubicacion: string;
   horario: string;
-  cupos: number;
+  descripcion: string;
 }
