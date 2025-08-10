@@ -1,25 +1,40 @@
 @let claseData = clase();
 
 @if(clasesResource.isLoading()){
-    <div>Cargando detalles...</div>
+    <div class="text-gray-500">Cargando...</div>
 }
 
 @if(clasesResource.error()){
-    <div>Error al cargar la clase</div>
+    <div class="text-red-500">Error al cargar la clase</div>
 }
 
 @if(!clasesResource.isLoading() && claseData){
-    <h2>{{ claseData?.nombre }}</h2>
-    <p><strong>Tipo:</strong> {{ claseData?.tipo }}</p>
-    <p><strong>Ubicación:</strong> {{ claseData?.ubicacion }}</p>
-    <p><strong>Horario:</strong> {{ claseData?.horario | date: 'short' }}</p>
-    <!-- <p><strong>Descripción:</strong> {{ clase()?.descripcion }}</p> -->
+    <div class="bg-white shadow-md rounded-lg p-6">
+        <h2>{{ claseData?.nombre }}</h2>
+        <p class="mb-2"><strong>Tipo:</strong> {{ claseData?.tipo }}</p>
+        <p class="mb-2"><strong>Ubicación:</strong> {{ claseData?.ubicacion }}</p>
+        <p class="mb-4"><strong>Horario:</strong> {{ claseData?.horario | date: 'short' }}</p>
+    </div>
 
-    <button (click)="reservar()">Reservar</button>
-    <button (click)="volver()">Volver</button>
+    <div class="flex gap-4 mt-8">
+        <button class="btn btn-primary" 
+        (click)="reservar()">
+            Reservar
+        </button>
+        <button  class="btn btn-secondaryr" 
+        (click)="volver()">
+            Volver
+        </button>
+    </div>
 }
 
 @if(!clasesResource.isLoading() && !claseData){
-    <p>Clase no encontrada.</p>
-    <button (click)="volver()">Volver</button>
+    <div class="text-center">
+        <p>Clase no encontrada.</p>
+        <button 
+        class="btn btn-secondary mt-4" 
+        (click)="volver()">
+            Volver
+        </button>
+    </div>
 }
