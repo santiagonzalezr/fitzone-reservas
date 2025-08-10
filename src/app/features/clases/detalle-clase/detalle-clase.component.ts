@@ -16,6 +16,8 @@ export class DetalleClaseComponent {
   route = inject(ActivatedRoute)
   router = inject(Router)
   idClase = signal<string | null>(null);
+  goReservas = false;
+  reservada = false;
 
   clasesResource = rxResource({
     loader: () => this.clasesService.getClases()
@@ -36,13 +38,25 @@ export class DetalleClaseComponent {
   }
 
   reservar() {
-    if (this.clase()) {
+    const clase = this.clase();
+    if (clase) {
       const reservas = JSON.parse(localStorage.getItem('reservas') ?? '[]');
-      reservas.push(this.clase());
-      localStorage.setItem('reservas', JSON.stringify(reservas));
-      //alert('Clase reservada con éxito');
 
-      this.router.navigate(['/reservas']);
+      const yaReservada = reservas.some((r: { id: number; }) => r.id === clase.id);
+      
+      if (yaReservada) {
+        this.reservada = true;
+        return;
+      }
+
+      reservas.push(clase);
+      localStorage.setItem('reservas', JSON.stringify(reservas));
+      this.goReservas = true;
+      
     }
+  }
+
+  mostrarReservas(){
+    this.router.navigate(['/reservas']);
   }
 }
