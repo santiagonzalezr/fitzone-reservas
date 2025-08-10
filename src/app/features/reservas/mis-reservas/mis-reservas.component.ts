@@ -1,5 +1,5 @@
 import { Component, computed, signal } from '@angular/core';
-import { Clase } from '../../../../core/models/clase.model';
+import { Clase } from '../../../core/models/clase.model'; 
 import { DatePipe } from '@angular/common';
 
 @Component({
