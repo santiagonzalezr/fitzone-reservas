@@ -1,0 +1,9 @@
+nav{
+    ul{
+        li{
+            a.bg-blue-700:hover{
+                background-color: #1447e6;
+            }
+        }
+    }
+}
