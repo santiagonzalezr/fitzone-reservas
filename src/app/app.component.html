@@ -1,4 +1,6 @@
-<app-nav></app-nav>
-<div class="container mx-auto mt-10 mb-10">
+@if(router.url !== '/login'){
+    <app-nav></app-nav>
+}
+<div class="container mx-auto" [ngClass]="{'mt-25': router.url !== '/login', 'mb-10': router.url !== '/login'}">
     <router-outlet></router-outlet>
 </div>
