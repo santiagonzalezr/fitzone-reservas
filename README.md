@@ -38,6 +38,20 @@ Antes de comenzar, asegúrate de tener instalado:
 
 ---
 
+## 🔑 Credenciales de prueba (Simulación de Login)
+
+Para acceder a la aplicación use alguna de las siguientes credenciales:
+
+| Usuario       | Contraseña |
+|---------------|-----------|
+| usuario1      | 123456    |
+| usuario2      | 654321    |
+
+El login es una simulación utilizando un archivo **mock** con datos en `public/mock-users.json`.  
+No hay backend real, la autenticación se realiza en el frontend.
+
+---
+
 
 ## 🛠 Tecnologías utilizadas
 - **Angular 18+** (standalone components, signals, rxResource)
