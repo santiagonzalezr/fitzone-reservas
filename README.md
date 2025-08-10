@@ -22,7 +22,7 @@ Antes de comenzar, asegúrate de tener instalado:
 1. **Clonar el repositorio**
    ```bash
    git clone https://github.com/santiagonzalezr/fitzone-reservas.git
-   cd TU_REPO
+   cd fitzone-reservas
    ```
 
 2. **Instalar dependencias**
