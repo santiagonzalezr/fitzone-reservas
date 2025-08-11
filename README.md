@@ -3,7 +3,7 @@
 Aplicación desarrollada con **Angular** y **TailwindCSS** que simula un sistema de clases deportivas con autenticación, filtros y gestión de reservas.
 
 ## 🚀 Demo en producción
-[Ver aplicación desplegada](https://fitzone-reservas-5ihdkfvak-santiagos-projects-80fafdc7.vercel.app/)
+[Ver aplicación desplegada](https://fitzone-reservas.vercel.app/)
 
 ## 📂 Repositorio
 [Ver código en GitHub](https://github.com/santiagonzalezr/fitzone-reservas.git)
