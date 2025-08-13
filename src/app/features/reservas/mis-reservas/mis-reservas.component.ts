@@ -1,10 +1,10 @@
 import { Component, computed, signal } from '@angular/core';
 import { Clase } from '../../../core/models/clase.model'; 
-import { DatePipe } from '@angular/common';
+import { DatePipe, CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-mis-reservas',
-  imports: [DatePipe],
+  imports: [DatePipe, CommonModule],
   templateUrl: './mis-reservas.component.html',
   styleUrl: './mis-reservas.component.css'
 })

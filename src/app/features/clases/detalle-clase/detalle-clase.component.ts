@@ -3,11 +3,12 @@ import { rxResource } from '@angular/core/rxjs-interop';
 import { ClasesService } from '../../../core/services/clases.service';
 import { ActivatedRoute, RouterModule, Router } from '@angular/router';
 import { DatePipe } from '@angular/common';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-detalle-clase',
   standalone: true,
-  imports: [DatePipe],
+  imports: [DatePipe, CommonModule],
   templateUrl: './detalle-clase.component.html',
   styleUrl: './detalle-clase.component.css'
 })

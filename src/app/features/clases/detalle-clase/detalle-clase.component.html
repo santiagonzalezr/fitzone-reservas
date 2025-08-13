@@ -48,37 +48,42 @@
     </div>
 }
 
-@if(goReservas){
 
-    <div id="popup-modal" tabindex="-1" class="flex overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%)] max-h-full bg-gray-700/75">
-        <div class="relative p-4 w-full max-w-md max-h-full">
-            <div class="relative bg-white rounded-lg shadow-sm">
-                <div class="p-4 md:p-5 text-center">
-                    <svg class="w-12 h-12 text-green-600 m-auto mb-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
-                    <path fill-rule="evenodd" d="M2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10S2 17.523 2 12Zm13.707-1.293a1 1 0 0 0-1.414-1.414L11 12.586l-1.793-1.793a1 1 0 0 0-1.414 1.414l2.5 2.5a1 1 0 0 0 1.414 0l4-4Z" clip-rule="evenodd"/>
-                    </svg>
+<div 
+    id="popup-modal" 
+    tabindex="-1" 
+    class="popup-modal flex overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%)] max-h-full bg-gray-700/75"
+    [ngClass]="{'open': goReservas}"
+    >
+    <div class="relative p-4 w-full max-w-md max-h-full">
+        <div class="relative bg-white rounded-lg shadow-sm">
+            <div class="p-4 md:p-5 text-center">
+                <svg class="w-12 h-12 text-green-600 m-auto mb-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                <path fill-rule="evenodd" d="M2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10S2 17.523 2 12Zm13.707-1.293a1 1 0 0 0-1.414-1.414L11 12.586l-1.793-1.793a1 1 0 0 0-1.414 1.414l2.5 2.5a1 1 0 0 0 1.414 0l4-4Z" clip-rule="evenodd"/>
+                </svg>
 
-                    <h3 class="mb-5 text-lg font-normal text-gray-500 dark:text-gray-400">Reservado correctamente</h3>
-                    <button (click)="mostrarReservas()" data-modal-hide="popup-modal" type="button" class="btn btn-primary m-2">
-                        Ir a reservas
-                    </button>
-                    <button data-modal-hide="popup-modal" type="button" class="btn btn-secondary m-2" (click)="volver()">Volver</button>
-                </div>
+                <h3 class="mb-5 text-lg font-normal text-gray-500 dark:text-gray-400">Reservado correctamente</h3>
+                <button (click)="mostrarReservas()" data-modal-hide="popup-modal" type="button" class="btn btn-primary m-2">
+                    Ir a reservas
+                </button>
+                <button data-modal-hide="popup-modal" type="button" class="btn btn-secondary m-2" (click)="volver()">Volver</button>
             </div>
         </div>
     </div>
+</div>
 
-}
 
-@if(reservada){
-    <div class="flex items-center justify-between flex-col md:flex-row px-4 py-4 md:py-2 mb-4 text-sm text-yellow-800 rounded-lg bg-yellow-50 dark:bg-gray-800 dark:text-yellow-300 mt-10" role="alert">
-        <div>
-            <svg class="shrink-0 inline w-4 h-4 me-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-                <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z"/>
-            </svg>
-            <span class="font-medium mr-10">Esta clase ya se encuentra reservada</span>
-        </div>
-            
-        <button class="btn btn-primary mt-5 md:mt-0" (click)="mostrarReservas()">Ir a mis reservas</button>
+
+
+<div class="alert-reserva flex items-center justify-between flex-col md:flex-row px-4 py-4 md:py-2 mb-4 text-sm text-yellow-800 rounded-lg bg-yellow-50 dark:bg-gray-800 dark:text-yellow-300 mt-10"
+[ngClass]="{'show': reservada}" 
+role="alert">
+    <div>
+        <svg class="shrink-0 inline w-4 h-4 me-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z"/>
+        </svg>
+        <span class="font-medium mr-10">Esta clase ya se encuentra reservada</span>
     </div>
-}
+        
+    <button class="btn btn-primary mt-5 md:mt-0" (click)="mostrarReservas()">Ir a mis reservas</button>
+</div>

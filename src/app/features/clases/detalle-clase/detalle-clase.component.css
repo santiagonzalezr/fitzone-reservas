@@ -1,0 +1,27 @@
+.popup-modal{
+    opacity: 0;
+    pointer-events: none;
+    &.open{
+        opacity: 1;
+        pointer-events: auto;
+        .w-full{
+            transform: scale(1);
+        }
+    }
+    .w-full{
+        transform: scale(0);
+        transition: .3s;
+    }
+}
+
+.alert-reserva{
+    opacity: 0;
+    transform: translateY(10px);
+    pointer-events: none;
+    transition: .5s all;
+    &.show{
+        opacity: 1;
+        pointer-events: auto;
+        transform: translateY(0);
+    }
+}
