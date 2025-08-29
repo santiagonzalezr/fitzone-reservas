@@ -12,7 +12,7 @@ body {
 
 /* ===== Títulos ===== */
 h1, h2, h3, h4, h5, h6 {
-  @apply font-bold text-gray-900;
+  @apply font-bold;
 }
 
 h1 {
@@ -33,7 +33,7 @@ h3 {
 }
 
 .btn-primary {
-  @apply bg-blue-500 text-white hover:bg-blue-600;
+  @apply bg-gray-800 text-white hover:bg-gray-800;
 }
 
 .btn-secondary {

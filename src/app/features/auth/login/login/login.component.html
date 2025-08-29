@@ -1,18 +1,21 @@
-<div class="h-screen left-0 top-0 flex justify-center items-center fixed w-full">
-  <div class="mx-auto bg-white p-6 shadow-lg rounded-lg min-w-80">
+<div class="h-screen left-0 top-0 flex justify-center items-center fixed w-full bg-[url(https://images.pexels.com/photos/4761352/pexels-photo-4761352.jpeg?_gl=1*q5tj44*_ga*MjA2NzQxNTU2OS4xNzQ1OTQ1MzU2*_ga_8JE65Q40S6*czE3NTY0ODcxOTQkbzMkZzEkdDE3NTY0ODc3NjUkajYwJGwwJGgw)] bg-cover bg-center bg-no-repeat"> 
+  <div class="mx-auto bg-white p-6 pt-0 shadow-lg rounded-lg min-w-80"> 
+    <div class="flex justify-center">
+      <img class="max-w-40" src="images/fitzone-logo.png" alt="fitzone-logo">
+    </div>
     <h2 class="text-2xl mb-4 text-center">Iniciar sesión</h2>
 
     <form class="max-w-sm mx-auto" (ngSubmit)="login()" autocomplete="off">
       <div class="mb-5">
         <label for="user" class="block mb-2 text-sm font-medium text-gray-900">Usuario</label>
         <input [(ngModel)]="username" name="username" required type="text" id="user"
-          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:border-gray-600 dark:placeholder-gray-400 dark:focus:ring-blue-500 dark:focus:border-blue-500"
           placeholder="Usuario" autocomplete="off" spellcheck="false" required />
       </div>
       <div class="mb-7">
         <label for="password" class="block mb-2 text-sm font-medium text-gray-900">Contraseña</label>
         <input type="password" id="password" [(ngModel)]="password" name="password"
-          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:border-gray-600 dark:placeholder-gray-400 dark:focus:ring-blue-500 dark:focus:border-blue-500"
           placeholder="Contraseña" autocomplete="off" spellcheck="false" autocomplete="new-password" required />
       </div>
 
@@ -32,7 +35,7 @@
         </div>
       }
 
-      <button type="submit" class="btn btn-primary w-full">Submit</button>
+      <button type="submit" class="btn btn-primary w-full">Ingresar</button>
     </form>
   </div>
 </div>
